@@ -1,7 +1,7 @@
 __pycache__
-venv
-tools
-logs
-firebase
+.venv
+.tools
+.logs
+.firebase
 .*.swp
 .*.swo

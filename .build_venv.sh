@@ -28,13 +28,14 @@ execute_command() {
 ####################
 
 VENV_VER=16.4.1
-DEV_TOOLS=${DEV_HOME}/tools
 
-if [ -z "${DEV_TOOLS}" ];then
+if [ -z "${DEV_HOME}" ];then
     echo "Must run following command beforehand" 
     echo "$ source init.env"
     exit 1
 fi
+
+DEV_TOOLS=${DEV_HOME}/.tools
 
 echo "Building virtualenv" 
 

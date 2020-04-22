@@ -8,18 +8,9 @@ from app.util       import Common, Test
 app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
-def root():
-    return render_template(
-            'index.html', 
-                _title  = "test_page"
-            ,   _msg    = 'test'
-            )
-
-@app.route('/home', methods = ['GET'])
-def home():
-    return render_template(
-            'index.html', 
-                _title  = "test_page"
-            ,   _msg    = 'test'
-            )
+@app.route('/<var>', methods = ['GET'])
+def root(var = '') :
+    with open(os.environ["DEV_HOME"]  + "/conf/deploy.json", "r") as f :
+        pages = json.load(f)
+        return render_template(pages[var])
 

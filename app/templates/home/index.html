@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    {% include 'common/head.html' %}
+
+    <body>
+
+        {% include 'common/header.html' %}
+
+        <!-- body -->
+        <div id="contents" class="container-fluid bg-danger">
+        </div>
+        <div id="show_more" class="py-2"> Show More </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            console.log("{{ _msg }}");
+            $("#contents").html(gen_cards(30));
+        });
+
+        $("#show_more").on("click",
+                ()=> $("#contents").append(gen_cards(30)) )
+
+    </script>
+
+</html>
+
