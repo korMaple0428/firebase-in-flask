@@ -16,7 +16,7 @@ def render_template(path) :
 
 if __name__ == "__main__" :
 
-    with open(os.environ["DEV_HOME"]  + "/conf/deploy.json", "r") as f :
+    with open(os.environ["DEV_HOME"]  + "/deploy.json", "r") as f :
 
         pages = json.load(f)
 
