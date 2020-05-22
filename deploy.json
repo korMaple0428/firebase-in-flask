@@ -1,5 +1,4 @@
 {
     "" : "index.html",
-    "home" : "home/index.html",
-    "test" : "test/index.html"
+    "test" : "test.html"
 }
